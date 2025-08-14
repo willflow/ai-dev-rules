@@ -8,6 +8,12 @@ ai-dev-rules/
 ├── README.md                           # 项目说明文档
 ├── getting-good-results-from-claude-code.md  # 通用开发指导原则
 ├── frontend-development-rules.md       # 前端专用开发规范
+├── commands/                           # Claude Code 命令集合
+│   ├── explore-plan-code-test.md       # 探索-计划-编码-测试工作流
+│   ├── git-commit.md                   # Git提交规范和自动化
+│   ├── gogogo.md                       # 继续未完成任务
+│   ├── ooda-cycle.md                   # OODA循环工作流程
+│   └── simplify.md                     # 代码简化分析命令
 └── agents/                             # OODA循环智能体集合
     ├── observe.md                      # 观察阶段 - 信息收集
     ├── orient.md                       # 定向阶段 - 分析理解  
@@ -39,6 +45,45 @@ ai-dev-rules/
 - 🎣 **Hook/Composable设计** - 完整性封装思维，避免分散式设计
 - 📊 **数据流处理** - 完整数据流追踪，对象操作最佳实践
 - 📁 **导入路径规范** - 绝对路径vs相对路径的使用标准
+
+### Claude Code 命令集合
+
+为Claude Code定制的专用命令，提供高效的开发工作流程：
+
+#### [`commands/explore-plan-code-test.md`](./commands/explore-plan-code-test.md) - 完整开发流程
+**探索-计划-编码-测试工作流**
+- 🔍 **探索阶段** - 并行子代理查找相关文件和信息
+- 📋 **计划阶段** - 详细实施方案，包含测试和文档
+- 💻 **编码阶段** - 遵循代码库风格，自动格式化
+- 🧪 **测试阶段** - 并行测试验证，UX功能检查
+
+#### [`commands/git-commit.md`](./commands/git-commit.md) - Git提交规范
+**标准化提交流程和格式**
+- 📝 **格式标准** - type(scope): description 格式
+- 🏷️ **类型规范** - feat, fix, refactor, docs等标准类型
+- 📋 **详细描述** - 结构化的变更列表格式
+- ✅ **自动化** - 快速提交当前所有修改
+
+#### [`commands/gogogo.md`](./commands/gogogo.md) - 任务续行
+**智能任务恢复机制**
+- 🔄 **状态检查** - 自动检查TODO列表和工作状态
+- ⚡ **快速恢复** - 识别in_progress和pending任务
+- 🎯 **智能续行** - 从中断点精确恢复工作
+- 📝 **别名支持** - go, continue, 继续等多种调用方式
+
+#### [`commands/ooda-cycle.md`](./commands/ooda-cycle.md) - OODA工作流
+**系统化问题解决框架**
+- 👁️ **观察** - 使用observe agent全面收集信息
+- 🧭 **定向** - 使用orient agent分析理解上下文
+- 🎯 **决策** - 使用decide agent评估方案选择
+- ⚡ **行动** - 使用act agent精确执行验证
+
+#### [`commands/simplify.md`](./commands/simplify.md) - 代码简化分析
+**过度工程化检测工具**
+- 🔍 **复杂性分析** - 识别过度工程化问题
+- 🎯 **简化建议** - 提供具体的代码简化方案
+- 👨‍💻 **开发体验** - 改善代码维护性和可读性
+- 📊 **优先级评估** - 按影响程度排序改进建议
 
 ### OODA循环智能体
 
